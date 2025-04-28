@@ -26,6 +26,8 @@ sql.connect(config)
          console.error('Database connection failed:', err);
      });
 
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
      res.send('Hello, Narmadha! Your app is live!');
 });
